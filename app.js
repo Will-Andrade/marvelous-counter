@@ -3,11 +3,14 @@ const buttonContainer = document.querySelector('section.button-container');
 let counter = 0;
 
 const counterColorFeedback = counter => {
-    if (counter > 0) {
+    const counterIsPositive = counter > 0;
+    const counterIsNegative = counter < 0;
+
+    if (counterIsPositive) {
         return counterSpan.style.color = 'green';
     }
 
-    if (counter < 0) {
+    if (counterIsNegative) {
         return counterSpan.style.color = 'red';
     }
 
@@ -15,19 +18,22 @@ const counterColorFeedback = counter => {
 }
 
 const handleCounter = ({ target }) => {
-    if (target.classList.contains('decrease')) {
-        counterSpan.textContent = --counter;
-        return counterColorFeedback(counter)
-    }
+    const shouldIncrement = target.classList.contains('increase');
+    const shouldDecrement = target.classList.contains('decrease');
 
-    if (target.classList.contains('increase')) {
-        counterSpan.textContent = ++counter
-        return counterColorFeedback(counter)
+    if (shouldIncrement) {
+        counterSpan.textContent = ++counter;
+        return counterColorFeedback(counter);
     }
     
-    counter = 0
+    if (shouldDecrement) {
+        counterSpan.textContent = --counter;
+        return counterColorFeedback(counter);
+    }
+
+    counter = 0;
     counterSpan.textContent = counter;
-    return counterColorFeedback(counter)
+    return counterColorFeedback(counter);
 }
 
-buttonContainer.addEventListener('click', handleCounter)
+buttonContainer.addEventListener('click', handleCounter);
