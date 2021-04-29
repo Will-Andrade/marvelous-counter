@@ -7,14 +7,14 @@ const counterColorFeedback = counter => {
     const counterIsNegative = counter < 0;
 
     if (counterIsPositive) {
-        return counterSpan.style.color = 'green';
+        return counterSpan.style.color = '#0F0';
     }
 
     if (counterIsNegative) {
-        return counterSpan.style.color = 'red';
+        return counterSpan.style.color = '#F00';
     }
 
-    return counterSpan.style.color = 'black';
+    return counterSpan.style.color = '#000';
 }
 
 const handleCounter = ({ target }) => {
