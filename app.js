@@ -1,5 +1,5 @@
 const counterSpan = document.querySelector('span#value');
-const buttonContainer = document.querySelector('section.button-container');
+const buttonContainer = document.querySelector('div.button-container');
 let counter = 0;
 
 const counterColorFeedback = counter => {
