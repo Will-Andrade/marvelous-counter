@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font: 'Lexend', sans-serif;
+    --primary-color: #F8F5F2;
+    --secondary-color: #000;
+    --base-red: #F00;
+    --base-green: #0F0;
+    --base-fw: 600;
+}
+
+body {
+    text-align: center;
+    font-family: var(--primary-font);
+    letter-spacing: 0.1em;
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 5em;
+}
+
+span {
+    display: block;
+    font-size: 6em;
+    margin: 0.4em;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.button-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    display: inline-block;
+    padding: 0.7em 1.2em;
+    background: transparent;
+    
+    font-size: 0.8em;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: var(--base-fw);
+
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+button:hover {
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button.decrease:hover {
+    background-color: var(--base-red);
+    border: 2px solid  var(--base-red);
+    color: var(--primary-color);
+}
+
+button.increase:hover {
+    background-color: var(--base-green);
+    border: 2px solid var(--base-green);
+    color: var(--primary-color) ;
+}
+
+button.reset:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    height: 10vh;
+    background-color: #212027;
+
+    font-weight: var(--base-fw);
+    color: var(--primary-color);
+}
