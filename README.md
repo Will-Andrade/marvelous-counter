@@ -35,7 +35,7 @@ I made this project on my own to practice basic DOM Interactions and layout usin
 ## What I've Learned
 
 1. Center content trick using ```display: grid;```.
-2. How easy it is to create a counter with JavaScript and change it's color based on its current number.
+2. How easy it is to create a counter with JavaScript and change it's color based on its current value.
 3. How to create CSS variables.
 4. Upgraded my Flexbox layout creation.
 
